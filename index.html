@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vérification d'attestation - HeroTic</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f172a;
+    color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+    margin: 0;
+  }
+  .card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  h1 {
+    font-size: 20px;
+    margin-top: 0;
+    color: #38bdf8;
+  }
+  .valide {
+    display: inline-block;
+    background: #16a34a;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .invalide {
+    display: inline-block;
+    background: #dc2626;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #334155;
+    font-size: 14px;
+  }
+  .id-tag {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+  }
+</style>
+</head>
+<body>
+  <div class="card" id="content">
+    Chargement...
+  </div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  const content = document.getElementById("content");
+
+  fetch("data.json")
+    .then(res => res.json())
+    .then(data => {
+      if (!id || !data[id]) {
+        content.innerHTML = `
+          <span class="invalide">Attestation non trouvée</span>
+          <p>Aucun identifiant valide n'a été fourni ou l'attestation n'existe pas dans nos registres.</p>
+        `;
+        return;
+      }
+
+      const etudiant = data[id];
+      let lignes = etudiant.evaluations.map(e =>
+        `<tr><td>${e.matiere}</td><td>${e.note}</td></tr>`
+      ).join("");
+
+      content.innerHTML = `
+        <span class="valide">Attestation valide</span>
+        <div class="id-tag">ID : ${id}</div>
+        <h1>${etudiant.nom}</h1>
+        <p>${etudiant.formation}</p>
+        <table>
+          <tr><th>Matière</th><th>Note</th></tr>
+          ${lignes}
+        </table>
+      `;
+    })
+    .catch(() => {
+      content.innerHTML = `<span class="invalide">Erreur de chargement des données</span>`;
+    });
+</script>
+</body>
+</html>
