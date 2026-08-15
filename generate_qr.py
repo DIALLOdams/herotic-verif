@@ -4,7 +4,7 @@ import qrcode
 
 # ⚠️ À MODIFIER plus tard : mets ici l'adresse de ton site une fois sur GitHub Pages
 # Exemple : "https://tonpseudo.github.io/herotic-verif/"
-BASE_URL = "https://tonpseudo.github.io/herotic-verif/"
+BASE_URL = "https://diallodams.github.io/herotic-verif/"
 
 DATA_FILE = "data.json"
 OUTPUT_DIR = "qrcodes"
