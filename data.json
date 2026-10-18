@@ -44,7 +44,7 @@
     ]
   },
   "HT-2026-0005": {
-    "nom": "NAMORY BERETE",
+    "nom": "NAMORY BÉRÉTÉ",
     "formation": "Auto École HeroTic",
     "evaluations": [
       { "matiere": "Théorie : Marquage aux sols", "note": "7/10" },
@@ -88,7 +88,7 @@
     ]
   },
   "HT-2026-0009": {
-    "nom": "JEAN PEGUITHA",
+    "nom": "JEAN PEGUITHA SAOROMOU",
     "formation": "Auto École HeroTic",
     "evaluations": [
       { "matiere": "Théorie : Marquage aux sols", "note": "6/10" },
@@ -116,7 +116,7 @@
     ]
   },
   "HT-2026-0012": {
-    "nom": "IBRAHIMA TAMBADOUNO",
+    "nom": "IBRAHIMA TAMBADOU",
     "formation": "Cyber HeroTic - Informatique",
     "evaluations": [
       { "matiere": "Windows", "note": "7,8/10" },
@@ -126,7 +126,7 @@
     ]
   },
   "HT-2026-0013": {
-    "nom": "IBRAHIMA CONDE",
+    "nom": "IBRAHIMA CONDÉ",
     "formation": "Auto École HeroTic",
     "evaluations": [
       { "matiere": "Théorie : Marquage aux sols", "note": "6/10" },
