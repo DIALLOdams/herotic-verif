@@ -135,5 +135,16 @@
       { "matiere": "Théorie : Verticale gestuelle humaine", "note": "8,5/10" },
       { "matiere": "Pratique", "note": "6,5/10" }
     ]
+  },
+  "HT-2026-0014": {
+    "nom": "YOUNOUSSA DIALLO",
+    "formation": "Auto École HeroTic",
+    "evaluations": [
+      { "matiere": "Théorie : Marquage aux sols", "note": "7/10" },
+      { "matiere": "Théorie : Intersection", "note": "6/10" },
+      { "matiere": "Théorie : Croisement / Dépassement", "note": "6/10" },
+      { "matiere": "Théorie : Verticale gestuelle humaine", "note": "6,5/10" },
+      { "matiere": "Pratique", "note": "6/10" }
+    ]
   }
 }
